@@ -6,7 +6,7 @@ int main()
 {
 	int n = 0;
 	int t = 0;
-	int result = 0;
+	int res = 0;
 
 
 	cout << "자연수를 입력하세요 : ";
@@ -21,9 +21,11 @@ int main()
 
 	for (; t > 0;)
 	{
-
+		res *= 10;
+		res += (t % 2);
+		t /= 10;
 	}
 
-	cout << "2진수 = " << t << "(2)";
+	cout << "2진수 = " << res << "(2)";
 
 }
